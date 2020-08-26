@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
     createLexer(options) {
-        const nounFile = path.resolve(process.cwd(), options.nounFile || 'nounfile.json');
+        const nounFile = options.nounFile || 'nounfile.json';
         if (!fs.existsSync(nounFile)) {
             throw Error('File not found: ', nounFile);
         }
