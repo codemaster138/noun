@@ -6,7 +6,7 @@ module.exports = {
     createLexer(options) {
         const nounFile = options.nounFile || 'nounfile.json';
         if (!fs.existsSync(nounFile)) {
-            throw Error('File not found: ', nounFile);
+            throw Error('File not found: ' + nounFile);
         }
         const data = JSON.parse(fs.readFileSync(nounFile));
         if (!data.tokens) throw 'Missing field "tokens" in nounfile';
