@@ -20,11 +20,11 @@ console.log(tokens[0]);
 Now create a file called *nounfile.json* in the same directory. This file tells noun.js how to tokenize your text. In this example, I'll only add two simple tokens:
 ```json
 {
-    // Keywords go here
+    "comment1": "Keywords go here",
     "keywords": [],
-    // Key is the name of the token, value is a regex used to match it.
+    "comment2": "Key is the name of the token, value is a regex used to match it",
+    "comment3": "First element has higher precendence",
     "tokens": {
-        // First element has higher precendence
         "FLOAT": "[0-9]+\\.[0-9]+",
         "INT": "[0-9]+"
     }
